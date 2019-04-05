@@ -1,0 +1,24 @@
+<?php
+/**
+ * @file
+ * Code for the example module.
+ */
+
+use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_theme().
+ */
+function admin_avatar_theme($existing, $type, $theme, $path) {
+  $user = User::load(1);
+
+
+  return array('admin_avatar' =>
+    array(
+      'variables' => array(
+        'avatar_url' => $user->user_picture->entity->getFileUri(),
+      ),
+      'template' => 'block--admin-avatar'
+    )
+  );
+}

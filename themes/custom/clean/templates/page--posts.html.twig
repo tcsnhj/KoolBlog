@@ -1,0 +1,14 @@
+{% include directory ~ '/partials/header.html.twig' %}
+
+<div id="content" class="site-content">
+  <div class="container main-content-area">
+    <div class="row">
+      <div class="main-content-inner col-sm-12 col-md-8">
+          {{ page.content }}
+      </div>
+      {% include directory ~ '/partials/sidebar.html.twig' %}
+    </div>
+  </div>
+</div>
+
+{% include directory ~ '/partials/footer.html.twig' %}

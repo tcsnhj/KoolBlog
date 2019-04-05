@@ -1,0 +1,18 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+ */
+
+function clean_preprocess_image(&$vars) {
+
+  if ($node = \Drupal::routeMatch()->getParameter('node')) {
+    if($node->getType() == 'about') {
+      $vars['attributes']['class'][] = 'img-circle';
+      $vars['attributes']['class'][] = 'center-block';
+      $vars['attributes']['style'][] = 'width: 150px;';
+    }
+  }
+}

@@ -1,0 +1,16 @@
+<header class="entry-header page-header">
+    <h2 class="entry-title">
+        <a href="{{ url }}" rel="bookmark">{{ label }}</a>
+    </h2>
+
+    <div class="entry-meta">
+        <span class="posted-on">
+            <i class="fa fa-calendar"></i>
+            <a rel="bookmark"><time class="entry-date published">{{ node.created.value | format_date('week_date') }}</time></a>
+        </span>
+    </div>
+</header>
+
+<div class="entry-content">
+    {{ content }}
+</div>

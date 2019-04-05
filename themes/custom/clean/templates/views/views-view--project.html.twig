@@ -1,0 +1,15 @@
+<div class="col-lg-12">
+    <br>
+
+    <div id="timeline">
+        <p class="line-end" data-translate="recently">Recently</p>
+        {% if rows %}
+            {{ rows }}
+        {% elseif empty %}
+            <div class="view-empty">
+                {{ empty }}
+            </div>
+        {% endif %}
+        <p class="line-end">...</p>
+    </div>
+</div>
